@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>인물 사전</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 3rem;
+      padding: 3rem;
+    }
+    
+    .image-section {
+      text-align: center;
+    }
+    
+    .profile-image {
+      width: 250px;
+      height: 300px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      object-fit: cover;
+      border: 5px solid #f8f9fa;
+    }
+    
+    .info-section {
+      padding-left: 2rem;
+    }
+    
+    .person-name {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 0.5rem;
+    }
+    
+    .person-title {
+      font-size: 1.4rem;
+      color: #7f8c8d;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    
+    .dictionary-entry {
+      background: #f8f9fa;
+      border-left: 5px solid #667eea;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    
+    .entry-section {
+      margin-bottom: 2rem;
+    }
+    
+    .entry-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .entry-title::before {
+      content: "▶";
+      color: #667eea;
+      margin-right: 0.5rem;
+    }
+    
+    .entry-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #34495e;
+      text-align: justify;
+    }
+    
+    .highlight {
+      background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .fact-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #667eea;
+    }
+    
+    .fact-label {
+      font-weight: bold;
+      color: #667eea;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .fact-value {
+      color: #2c3e50;
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+      
+      .info-section {
+        padding-left: 0;
+      }
+      
+      .profile-image {
+        width: 200px;
+        height: 240px;
+      }
+      
+      .person-name {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>인물 사전</h1>
+    </div>
+    
+    <div class="content">
+      <div class="image-section">
+        <img src="ddonghyukk.jpg" alt="인물 사진" class="profile-image">
+      </div>
+      
+      <div class="info-section">
+        <div class="person-name">최동혁</div>
+        <div class="person-title">솔로, 전기전자공학부</div>
+        
+        <div class="dictionary-entry">
+          <div class="entry-section">
+            <div class="entry-title">개요</div>
+            <div class="entry-content">
+              인하대학교의 <span class="highlight">대표적인 학생</span>으로, 하이테크에서 자주 출몰한다. 2002 월드컵때 태어나 현재까지 살아오고 있다.
+            </div>
+          </div>
+          
+          <div class="entry-section">
+            <div class="entry-title">주요 특징</div>
+            <div class="entry-content">
+              탁월한 <span class="highlight">몸매</span>를 바탕으로 어떤 상황에서도 유연한 분위기를 이끈다. 겸손하진 않은데 선배들에게 사랑받고 있다.
+            </div>
+          </div>
+          
+          <div class="entry-section">
+            <div class="entry-title">기본 정보</div>
+            <div class="facts-grid">
+              <div class="fact-item">
+                <div class="fact-label">출생</div>
+                <div class="fact-value">2002년 9월 24일</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">출생지</div>
+                <div class="fact-value">경기도 일산</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">학력</div>
+                <div class="fact-value">인하대학교</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">소속</div>
+                <div class="fact-value">RCY</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">MBTI</div>
+                <div class="fact-value">ENTP</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
